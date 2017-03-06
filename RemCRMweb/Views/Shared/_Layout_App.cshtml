@@ -1,0 +1,29 @@
+﻿<link href="~/Content/App/general.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.12.4.min.js"></script>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+<script src="~/Scripts/modernizr-2.6.2.js"></script>
+<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+@*<script src="~/Scripts/jquery.cookie-1.4.1.min.js"></script>*@
+<script src="~/Scripts/jquery.jqGrid.min.js"></script>
+<script src="~/Scripts/i18n/grid.locale-ru.js"></script>
+<script src="~/Scripts/App/general.js"></script>
+@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+@Html.Action("MenuApp", "Menu")
+<div id="fond"></div>
+<div id="order">
+    
+</div>
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</div>

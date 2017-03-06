@@ -1,0 +1,5 @@
+D:\RemCRM\RemCRMweb\RemCRMviewModel\bin\Debug\RemCRMviewModel.dll
+D:\RemCRM\RemCRMweb\RemCRMviewModel\bin\Debug\RemCRMviewModel.pdb
+D:\RemCRM\RemCRMweb\RemCRMviewModel\obj\Debug\RemCRMviewModel.dll
+D:\RemCRM\RemCRMweb\RemCRMviewModel\obj\Debug\RemCRMviewModel.pdb
+D:\RemCRM\RemCRMweb\RemCRMviewModel\obj\Debug\RemCRMviewModel.csprojResolveAssemblyReference.cache

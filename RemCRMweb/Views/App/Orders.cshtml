@@ -1,0 +1,14 @@
+﻿@model IEnumerable<RemCRMviewModel.Orders.OrderViewModel>
+@{
+    ViewBag.Title = "Orders";
+}
+<h2>Orders</h2>
+<input type="button" value="Новый заказ" class="btn btn-default" id="addBtn" />
+<table id="grid"></table>
+<div id="gridFooter"></div>
+<div id="operation">
+    <ul>
+        <li><p>Удалить</p></li>
+        <li><p>Печать документов</p></li>
+    </ul>
+</div>

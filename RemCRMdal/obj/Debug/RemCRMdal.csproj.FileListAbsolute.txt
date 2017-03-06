@@ -1,0 +1,14 @@
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\RemCRMdal.dll.config
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\RemCRMdal.dll
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\RemCRMdal.pdb
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\EntityFramework.dll
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\EntityFramework.SqlServer.dll
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\EntityFramework.xml
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\EntityFramework.SqlServer.xml
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\RemCRM\RemCRMweb\RemCRMdal\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\RemCRM\RemCRMweb\RemCRMdal\obj\Debug\RemCRMdal.dll
+D:\RemCRM\RemCRMweb\RemCRMdal\obj\Debug\RemCRMdal.pdb
+D:\RemCRM\RemCRMweb\RemCRMdal\obj\Debug\RemCRMdal.csprojResolveAssemblyReference.cache
