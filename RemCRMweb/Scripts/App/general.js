@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-
+    
     $('li#item').each(function () {                                                                 
         if (this.getElementsByTagName("a")[0].href === location.href) this.className = "active";       //menu.item activ if href==item.href
     });
@@ -27,7 +27,7 @@
     $(document).mouseup(function (e) {
         Content.closeWindowRight(e);
     });
-    //----------------------for_checkbox------------------//
+    //----------------------for_checkbox_context------------------//
     
     $('body').on('click', '.contextCheckbox', function () {
         
@@ -56,8 +56,21 @@
     for (var i = 1; i < 19; i++) {
         if (localStorage.getItem(i) === null) localStorage.setItem(i, 'true');
     }
+    //----------------------grid_checkbox------------------------------------//
+    $('#content').on('click', 'tr', function () {
+        var sum_ar_sel = 0;
+        $('tr').each(function (i) {
+
+            if ($(this).attr('aria-selected') === 'true' && $(this).hasClass('ui-state-highlight')) {
+                $('#operation').removeClass('close');
+                sum_ar_sel = 1;
+            }
+        });
+        if (sum_ar_sel === 0) $('#operation').addClass('close');
+    });
 
     //----------------------------------------------------------//
+
     $('body').click(function (event) {
         console.log(event.target);
     });
@@ -81,7 +94,10 @@
             Order.deleteOrder(ret.Number);
             $("#grid").trigger("reloadGrid", { fromServer: true, page: 1 });
         } else { alert("Please select row"); }
-     });
+    });
+
+    
+
 });
 
 Content = {
@@ -155,6 +171,7 @@ Content = {
             viewrecords: true,
             autowidth: true,
             sortable: true,
+            guiStyle: "bootstrap",
             multiboxonly: true,
             multiselect: true,
             //editurl: "/App/DeleteOrder",
@@ -205,18 +222,17 @@ Content = {
                             .append('<li><span><input type="checkbox" class="contextCheckbox" data-field="Device.Defect" data-index="18">Поломка</span></li>'))
                             .show('fast');
             
-                var checks = document.getElementsByClassName("contextCheckbox");
-                    
-                for (var i = 0; i < checks.length; i++) {
-                    
-                    if (localStorage.getItem($(checks[i]).attr('data-index')) === "true") {
-                        $(checks[i]).attr('checked', 'checked');
-                        $("#grid").showCol($(checks[i]).attr('data-field'));
-                    }
+                var checks = document.getElementsByClassName("contextCheckbox");                            //получение установленных ранее чекбоксов
+                                                                                                            //из локального хранилища
+                for (var i = 0; i < checks.length; i++) {                                                   //
+                                                                                                            //
+                    if (localStorage.getItem($(checks[i]).attr('data-index')) === "true") {                 //
+                        $(checks[i]).attr('checked', 'checked');                                            //
+                        $("#grid").showCol($(checks[i]).attr('data-field'));                                //
+                    }                                                                                       //
                     else if (localStorage.getItem($(checks[i]).attr('data-index')) !== null) $("#grid").hideCol($(checks[i]).attr('data-field'));
-                              
                 }
-         });
+        });
     }
 }
 
@@ -237,12 +253,9 @@ Order = {
                            "<li><a href=#tabs-2>Работы и материалы</a></li></ul>" +
                            "<div id=tabs-1></div>" +
                            "<div id=tabs-2><p>Содержимое второй вкладки</p></div>";
-                           
-                $('#order').html(tabs).show('slide', { direction: 'right' }, 500);
-                $('#fond').show('fade', 500);
-                
+                $('#order').html(tabs);
                 $('#tabs-1').html(html);
-                
+
                 $("#order").tabs({
 
                     ajaxOptions: {
@@ -251,6 +264,11 @@ Order = {
                         }
                     }
                 });
+
+                $('#order').show('slide', { direction: 'right' }, 500);
+                $('#fond').show('fade', 500);
+                
+                
                 
             },
             error: function() {}

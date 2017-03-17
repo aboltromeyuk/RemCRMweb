@@ -183,3 +183,6 @@
 
 .context-menu ul li a:hover { background-color: #eee; }  
     
+.close{
+    display: none;
+}

@@ -1,13 +1,11 @@
-﻿<link href="~/Content/App/general.css" rel="stylesheet" />
-<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+﻿<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
 <link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
-<script src="~/Scripts/jquery-1.12.4.min.js"></script>
-
+<link href="~/Content/App/general.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-
-<script src="~/Scripts/modernizr-2.6.2.js"></script>
+<script src="~/Scripts/modernizr-2.8.3.js"></script>
 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
 @*<script src="~/Scripts/jquery.cookie-1.4.1.min.js"></script>*@
@@ -18,7 +16,12 @@
 @Html.Action("MenuApp", "Menu")
 <div id="fond"></div>
 <div id="order">
-    
+    @*<ul>
+        <li><a href=#tabs-1>Информация о заказе</a></li>
+        
+        <li><a href=#tabs-2>Работы и материалы</a></li></ul>
+    <div id=tabs-1></div>
+    <div id=tabs-2><p>Содержимое второй вкладки</p></div>*@
 </div>
 <div class="container body-content">
     @RenderBody()
